@@ -59,7 +59,8 @@ public class Fraction {
     }
 
     public String toString() {
-        return simplifiedNumerator + "/" + simplifiedDenominator;
+        if (simplifiedDenominator != 1) return simplifiedNumerator + "/" + simplifiedDenominator;
+        else return Integer.toString(simplifiedNumerator);
     }
 
     public String unsimplified() {
